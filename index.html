@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Torneo de Gallitos · Marcador en vivo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="cabecera">
+    <div>
+      <p class="lema">Desfile del 20 de noviembre</p>
+      <h1>Torneo de Gallitos</h1>
+    </div>
+    <p class="pastilla" id="pastilla"><span class="punto" id="punto"></span><span id="pastilla-texto">Conectando…</span></p>
+  </header>
+
+  <main>
+    <section class="lider" aria-live="polite">
+      <p class="lider-etiqueta">Va ganando</p>
+      <p class="lider-nombre" id="lider-nombre">—</p>
+      <p class="lider-puntos" id="lider-puntos"></p>
+    </section>
+
+    <section>
+      <h2 class="titulo-seccion">Tabla de posiciones</h2>
+      <ol id="ranking" class="ranking"></ol>
+    </section>
+
+    <!-- ===== APARTADO: CONEXIÓN CON LA BASE DE DATOS (FIREBASE) ===== -->
+    <section class="conexion" id="conexion">
+      <h2 class="titulo-seccion">Conexión con Firebase</h2>
+      <dl class="datos">
+        <div><dt>Estado</dt><dd id="con-estado">Conectando…</dd></div>
+        <div><dt>Ruta de datos</dt><dd id="con-ruta">—</dd></div>
+        <div><dt>Equipos detectados</dt><dd id="con-equipos">—</dd></div>
+        <div><dt>Última actualización</dt><dd id="con-hora">—</dd></div>
+      </dl>
+      <p class="nota">Los puntajes llegan desde la app de App Inventor (componente FirebaseDB) y esta página los escucha en tiempo real. La configuración está en <code>firebase-config.js</code>.</p>
+
+      <!-- Panel de diagnóstico: solo aparece con ?debug=1 -->
+      <div id="debug" hidden>
+        <h3>Diagnóstico</h3>
+        <button type="button" id="btn-raiz">Ver estructura de la base de datos</button>
+        <pre id="debug-json">Esperando datos…</pre>
+      </div>
+    </section>
+    <!-- ================================================================ -->
+  </main>
+
+  <footer>
+    <p>Hecho por Informática · Newland Colegio Bilingüe</p>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
