@@ -13,11 +13,11 @@ export const RUTA = "contadorBD";
 
 // 3) Nombres de los equipos, en orden (del 1 al 6).
 export const EQUIPOS = [
-  "Equipo 1", 
-  "Equipo 2", 
-  "Equipo 3", 
-  "Equipo 4", 
-  "Equipo 5", 
+  "Equipo Newland", 
+  "TeamTurbo", 
+  "Agentes P", 
+  "Avispones Verdes", 
+  "Team Momonga", 
   "Equipo 6"
 ];
 
